@@ -19,10 +19,8 @@ stage ('Test'){
             steps {
                 sh '''
                     . venv/bin/activate 
-                    pip install pyodbc              # Install pyodbc
                     pip install pymssql             # Install pymssql   
                     pip install pandas              # Install pandas
-                    pip install sqlserverport       # Install sqlserverport
                     python3 test_kseniya_lazarchik.py
                 '''
         }
