@@ -16,8 +16,12 @@ stage('Build') {
             }
         }
 stage ('Test'){
-     steps {
-         sh 'python3 test_kseniya_lazarchik.py'
+            steps {
+                sh '''
+                    . myenv/bin/activate
+                    pip install pyodbc  # Install pyodbc
+                    python3 test_kseniya_lazarchik.py
+                '''
         }
     }
   }
