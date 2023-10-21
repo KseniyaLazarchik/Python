@@ -1,0 +1,15 @@
+pytest-html~=4.0.2
+pytest~=7.2.1
+pymssql~=2.2.9
+pyodbc~=4.0.39
+pyOpenSSL~=23.2.0
+flake8~=6.1.0
+flake8-builtins~=2.1.0
+flake8-isort~=6.1.0
+pandas~=2.1.1
+SQLAlchemy~=2.0.21
+pytest~=7.2.1
+sqlserverport~=1.0.1
+variables~=0.0.1
+
+

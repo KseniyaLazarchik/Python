@@ -1,0 +1,25 @@
+pipeline {
+agent any
+stages {
+    stage ('GIT Checkout'){
+        steps {
+            git changelog: false, poll: false, url: 'https://github.com/KseniyaLazarchik/Python'
+        }
+    }
+<<<<<<< HEAD
+    
+    stage('build') {
+  steps {
+    sh 'pip3 install -r requirements.txt'
+  }
+}
+    stage ('Test'){
+=======
+     stage ('Test'){
+>>>>>>> c529df1b55db444abefc90ebb84304e51b83e6f3
+        steps {
+            sh 'python3 test_kseniya_lazarchik.py'
+        }
+    }
+}
+}
