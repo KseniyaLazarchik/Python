@@ -6,6 +6,11 @@ stages {
             git changelog: false, poll: false, url: 'https://github.com/KseniyaLazarchik/Python'
         }
     }
+stage('build') {
+     steps {
+            sh 'pip3 install -r requirements.txt'
+        }
+    }
 stage ('Test'){
      steps {
          sh 'python3 test_kseniya_lazarchik.py'
