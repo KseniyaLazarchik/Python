@@ -20,6 +20,7 @@ stage ('Test'){
                 sh '''
                     . myenv/bin/activate
                     pip install pyodbc  # Install pyodbc
+                    pip install pandas  # Install pandas
                     python3 test_kseniya_lazarchik.py
                 '''
         }
