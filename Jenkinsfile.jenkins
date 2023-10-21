@@ -6,15 +6,24 @@ stages {
             git changelog: false, poll: false, url: 'https://github.com/KseniyaLazarchik/Python'
         }
     }
-stage('build') {
-  steps {
-    sh 'pip3 install -r requirements.txt'
-  }
-}
-    stage ('Test'){
-        steps {
-            sh 'python3 test_kseniya_lazarchik.py'
+stage('Build') {
+            steps {
+                sh '''
+                    python3 -m venv venv
+                    . venv/bin/activate
+                    pip install -r requirements.txt
+                '''
+            }
+        }
+stage ('Test'){
+            steps {
+                sh '''
+                    . venv/bin/activate 
+                    pip install pymssql             # Install pymssql   
+                    pip install pandas              # Install pandas
+                    python3 test_kseniya_lazarchik.py
+                '''
         }
     }
-}
+  }
 }

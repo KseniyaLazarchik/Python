@@ -1,18 +1,16 @@
-import pyodbc
+import pymssql
 import pandas
 import variables
 
 class TestDataBase:
-    conn = pyodbc.connect(DRIVER=variables.driver,
-                          SERVER=variables.server,
-                          DATABASE=variables.database,
-                          UID=variables.username,
-                          PWD=variables.password,
-                          Trusted_Connection='yes'.format(variables.serverspec))
-<<<<<<< HEAD
-=======
+    def __init__(self, server, database, username, password):
+        self.server = server
+        self.database = database
+        self.username = username
+        self.password = password
+        self.conn = pymssql.connect(server=self.server, database=self.database, user=self.username, password=self.password)
 
->>>>>>> c529df1b55db444abefc90ebb84304e51b83e6f3
+
     def get_dataframe(self, query):
         print(query)
         df = pandas.read_sql_query(query, self.conn)
