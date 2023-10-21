@@ -9,10 +9,7 @@ class TestDataBase:
                           UID=variables.username,
                           PWD=variables.password,
                           Trusted_Connection='yes'.format(variables.serverspec))
-<<<<<<< HEAD
-=======
 
->>>>>>> c529df1b55db444abefc90ebb84304e51b83e6f3
     def get_dataframe(self, query):
         print(query)
         df = pandas.read_sql_query(query, self.conn)
