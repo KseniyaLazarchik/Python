@@ -18,7 +18,7 @@ stage('Build') {
 stage ('Test'){
             steps {
                 sh '''
-                    . myenv/bin/activate 
+                    . venv/bin/activate 
                     pip install pyodbc              # Install pyodbc
                     pip install pandas              # Install pandas
                     pip install sqlserverport       # Install sqlserverport
