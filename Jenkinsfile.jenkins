@@ -25,5 +25,12 @@ stage ('Test'){
                 '''
         }
     }
+stage('Report') {
+            steps {
+                sh '''
+                   generate_report_tool
+                '''
+            }
+        }
   }
 }
