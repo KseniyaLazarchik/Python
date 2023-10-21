@@ -1,4 +1,5 @@
 # variables.py
+
 driver = "{ODBC Driver 17 for SQL Server}"
 server = "EPPLGDAW009A, 1433"
 database = "TRN"
