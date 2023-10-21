@@ -1,7 +1,6 @@
-import pyodbc
+import pymssql
 import pandas
 import variables
-import pymssql
 
 class TestDataBase:
     def __init__(self, server, database, username, password):
