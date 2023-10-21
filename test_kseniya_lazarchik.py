@@ -8,7 +8,7 @@ class TestDataBase:
                           DATABASE=variables.database,
                           UID=variables.username,
                           PWD=variables.password,
-                          Trusted_Connection='yes'.format(variables.serverspec))
+                          Trusted_Connection='yes')
 
     def get_dataframe(self, query):
         print(query)
