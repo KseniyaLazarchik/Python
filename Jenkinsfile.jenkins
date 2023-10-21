@@ -25,18 +25,20 @@ stage ('Test'){
                 '''
         }
     }
-  }
-    post {
-        always {
-            publishHTML(target: [
-                allowMissing: false,
-                alwaysLinkToLastBuild: false,
-                keepAll: true,
-                reportDir: 'HTML Report Directory',
-                reportFiles: 'html-file_name',
-                reportName: 'HTML Report',
-                reportTitles: ''
-            ])
+ stage('Publish HTML Report') {
+            steps {
+                script {
+                    publishHTML([
+                        allowMissing: false,
+                        alwaysLinkToLastBuild: false,
+                        keepAll: true,
+                        reportDir: "HTML Report Directory",
+                        reportFiles: 'html-file_name',
+                        reportName: 'HTML Report',
+                        reportTitles: ''
+                    ])
+                }
+            }
         }
     }
 }
