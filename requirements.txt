@@ -9,7 +9,6 @@ flake8-isort~=6.1.0
 pandas~=2.1.1
 SQLAlchemy~=2.0.21
 pytest~=7.2.1
-sqlserverport~=1.0.1
 variables~=0.0.1
 
 
