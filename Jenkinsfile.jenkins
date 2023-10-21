@@ -25,6 +25,11 @@ stage ('Test'){
                 '''
         }
     }
+stage('Create HTML Report Directory') {
+            steps {
+                sh 'mkdir -p "HTML Report Directory"'
+            }
+        }
  stage('Publish HTML Report') {
             steps {
                 script {
