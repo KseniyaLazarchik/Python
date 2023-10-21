@@ -23,26 +23,6 @@ stage ('Test'){
                     pip install pandas              # Install pandas
                     python3 test_kseniya_lazarchik.py
                 '''
-        }
-    }
-stage('Create HTML Report Directory') {
-            steps {
-                sh 'mkdir -p "HTML Report Directory"'
-            }
-        }
- stage('Publish HTML Report') {
-            steps {
-                script {
-                    publishHTML([
-                        allowMissing: false,
-                        alwaysLinkToLastBuild: false,
-                        keepAll: true,
-                        reportDir: "HTML Report Directory",
-                        reportFiles: 'html-file_name',
-                        reportName: 'HTML Report',
-                        reportTitles: ''
-                    ])
-                }
             }
         }
     }
