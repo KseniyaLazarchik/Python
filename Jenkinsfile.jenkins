@@ -25,14 +25,12 @@ stage ('Test'){
                 '''
             }
         }
-stage('cat logfile'){
+stage('logfile'){
             when {
                 branch "kl-*" 
                  }
 	    steps {
-		sh '''
-		    cat logfile.txt		
-		'''	
+		echo "Today's test is complete. Check the logs"
 		}
         }
     }
