@@ -25,9 +25,9 @@ stage ('Test'){
                 '''
             }
         }
-stage ('cat logfile'){
+stage('cat logfile'){
             when {
-                branch kl-* '''
+                branch "kl-*" 
                  }
 	    steps {
 		sh '''
