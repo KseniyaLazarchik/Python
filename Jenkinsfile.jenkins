@@ -25,5 +25,15 @@ stage ('Test'){
                 '''
             }
         }
+stage ('cat logfile'){
+            when {
+                branch kl-* '''
+                 }
+	    steps {
+		sh '''
+		    cat logfile.txt		
+		'''	
+		}
+        }
     }
 }
